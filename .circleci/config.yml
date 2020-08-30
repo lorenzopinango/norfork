@@ -3,6 +3,12 @@ version: 2.1
 orbs:
   maven: circleci/maven@0.0.12
 
+build:
+  environment:
+    # Customize the JVM maximum heap limit
+    MAVEN_OPTS: "-Xmx3G"
+    JAVA_OPTS: "-Xms3G -Xmx3G"
+
 workflows:
   maven_test:
     jobs:
