@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="producto">
+            <h2><span jhiTranslate="norforkApp.producto.detail.title">Producto</span> {{producto.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="norforkApp.producto.codigo">Codigo</span></dt>
+                <dd>
+                    <span>{{producto.codigo}}</span>
+                </dd>
+                <dt><span jhiTranslate="norforkApp.producto.nombre">Nombre</span></dt>
+                <dd>
+                    <span>{{producto.nombre}}</span>
+                </dd>
+                <dt><span jhiTranslate="norforkApp.producto.genero">Genero</span></dt>
+                <dd>
+                    <div *ngIf="producto.generoId">
+                        <a [routerLink]="['/genero', producto.generoId, 'view']">{{producto.generoId}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="norforkApp.producto.talla">Talla</span></dt>
+                <dd>
+                    <div *ngIf="producto.tallaId">
+                        <a [routerLink]="['/talla', producto.tallaId, 'view']">{{producto.tallaId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/producto', producto.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.norfork",
+      "nativeLanguage": "es"
+    },
+    "jhipsterVersion": "6.5.1",
+    "applicationType": "monolith",
+    "baseName": "norfork",
+    "packageName": "com.norfork",
+    "packageFolder": "com/norfork",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MWE1MmI2NGQzNmVmMmRmMWQ4ZGE4MTE3NzIwNjIzNWY3ZTM2ZWY2Yjk1Y2MyOWM3YjNlYjcxMGJmNTg0ODZkY2RiYTM2ZTU4Y2Q0OWE2YzY2ZDlhYjQ1NzBjMDNhMWFjZWU4MWQ4NTBmNzRhNWJkZWMxZjNiMjU4ZjVjOTg1ZjM=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "lumen",
+    "clientThemeVariant": "dark",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": [
+      "es"
+    ],
+    "blueprints": []
+  }
+}
