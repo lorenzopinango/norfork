@@ -65,10 +65,9 @@ public class InventarioResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated inventarioDTO,
      * or with status {@code 400 (Bad Request)} if the inventarioDTO is not valid,
      * or with status {@code 500 (Internal Server Error)} if the inventarioDTO couldn't be updated.
-     * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/inventarios")
-    public ResponseEntity<InventarioDTO> updateInventario(@Valid @RequestBody InventarioDTO inventarioDTO) throws URISyntaxException {
+    public ResponseEntity<InventarioDTO> updateInventario(@Valid @RequestBody InventarioDTO inventarioDTO) {
         log.debug("REST request to update Inventario : {}", inventarioDTO);
         if (inventarioDTO.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
